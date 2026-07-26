@@ -18,7 +18,7 @@ public class TerrainSwampMountain extends TerrainBase {
             float river) {
         float h = perlin.noise2(x / width, y / width) * heigth * river;
         h *= h / 32f;
-        h = h > 150f ? 150f : h;
+        h = h > 240f ? 240f : h;
 
         if (h < 14f) {
             h += perlin.noise2(x / 25f, y / 25f) * (14f - h) * 0.8f;
