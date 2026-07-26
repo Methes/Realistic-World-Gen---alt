@@ -13,7 +13,7 @@ public class TerrainMountainSpikes extends TerrainBase {
         float b = (12f + (perlin.noise2(x / 300f, y / 300f) * 6f));
         float h = cell.noise(x / 200D, y / 200D, 1D) * b * river;
         h *= h * 1.5f;
-        h = h > 155f ? 155f : h;
+        h = h > 245f ? 245f : h;
 
         if (h > 2f) {
             float d = (h - 2f) / 2f > 8f ? 8f : (h - 2f) / 2f;
