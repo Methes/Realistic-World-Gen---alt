@@ -12,7 +12,7 @@ public class TerrainMountainRiver extends TerrainBase {
             float river) {
         float h = perlin.noise2(x / 300f, y / 300f) * 135f * river;
         h *= h / 32f;
-        h = h > 150f ? 150f : h;
+        h = h > 240f ? 240f : h;
 
         /*
          * float bn = 0f; if(h < 1f) { bn = 1f - h; for(int i = 0; i < 3; i++) { bn *= bn * 1.25f; } bn = bn > 3f ? 3f :
