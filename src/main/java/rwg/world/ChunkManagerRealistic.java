@@ -228,41 +228,41 @@ public class ChunkManagerRealistic extends WorldChunkManager {
             return output;
         }
 
-        float b = (biomecell.noise((par1 + 4000f) / 1200D, par2 / 1200D, 1D) * 0.5f) + 0.5f;
+        float b = (biomecell.noise((par1 + 4000f) / 4800D, par2 / 4800D, 1D) * 0.5f) + 0.5f;
         b = b < 0f ? 0f : b >= 0.9999999f ? 0.9999999f : b;
 
-        float s = smallEnabled ? (biomecell.noise(par1 / 140D, par2 / 140D, 1D) * 0.5f) + 0.5f : 0f;
+        float s = smallEnabled ? (biomecell.noise(par1 / 560D, par2 / 560D, 1D) * 0.5f) + 0.5f : 0f;
         if (smallEnabled && s > 0.975f) {
             float h = (s - 0.975f) * 40f;
             h = h < 0f ? 0f : h >= 0.9999999f ? 0.9999999f : h;
             h *= biomes_smallLength;
             output = biomes_small.get((int) (h));
         } else if ((wetEnabled && b < 0.25f) || (!wetEnabled && b < 0.33f)) {
-            float h = (biomecell.noise(par1 / 450D, par2 / 450D, 1D) * 0.5f) + 0.5f;
+            float h = (biomecell.noise(par1 / 1800D, par2 / 1800D, 1D) * 0.5f) + 0.5f;
             h = h < 0f ? 0f : h >= 0.9999999f ? 0.9999999f : h;
 
             h *= biomes_snowLength;
             output = biomes_snow.get((int) (h));
         } else if ((wetEnabled && b < 0.50f) || (!wetEnabled && b < 0.66f)) {
-            float h = (biomecell.noise(par1 / 450D, par2 / 450D, 1D) * 0.5f) + 0.5f;
+            float h = (biomecell.noise(par1 / 1800D, par2 / 1800D, 1D) * 0.5f) + 0.5f;
             h = h < 0f ? 0f : h >= 0.9999999f ? 0.9999999f : h;
 
             h *= biomes_coldLength;
             output = biomes_cold.get((int) (h));
         } else if ((wetEnabled && b < 0.75f) || (!wetEnabled && b < 1f)) {
-            float h = (biomecell.noise(par1 / 450D, par2 / 450D, 1D) * 0.5f) + 0.5f;
+            float h = (biomecell.noise(par1 / 1800D, par2 / 1800D, 1D) * 0.5f) + 0.5f;
             h = h < 0f ? 0f : h >= 0.9999999f ? 0.9999999f : h;
 
             h *= biomes_hotLength;
             output = biomes_hot.get((int) (h));
         } else if (wetEnabled) {
-            float h = (biomecell.noise(par1 / 450D, par2 / 450D, 1D) * 0.5f) + 0.5f;
+            float h = (biomecell.noise(par1 / 1800D, par2 / 1800D, 1D) * 0.5f) + 0.5f;
             h = h < 0f ? 0f : h >= 0.9999999f ? 0.9999999f : h;
 
             h *= biomes_wetLength;
             output = biomes_wet.get((int) (h));
         } else {
-            float h = (biomecell.noise(par1 / 450D, par2 / 450D, 1D) * 0.5f) + 0.5f;
+            float h = (biomecell.noise(par1 / 1800D, par2 / 1800D, 1D) * 0.5f) + 0.5f;
             h = h < 0f ? 0f : h >= 0.9999999f ? 0.9999999f : h;
 
             h *= biomes_hotLength;
